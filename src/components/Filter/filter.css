@@ -1,0 +1,60 @@
+/*
+ navbar bg - #1f3349 
+ highlighet text -#00c57f
+ footer color - #6a6b6b
+ main text - #404040
+ secondary text - #5d5d5d
+*/
+
+.filterContainer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.filterContainer .txt{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #404040;
+}
+
+.slider {
+  -webkit-appearance: none;
+  height: 7px;
+  width: 200px;
+  border-radius: 5px;
+  background: #00c57f;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 0 10px
+}
+.slider::before{
+  content:'';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #00c57f;
+  margin-top: -5px;
+}
+
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #00c57f;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00c57f;
+  cursor: pointer;
+}
