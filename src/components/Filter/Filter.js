@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './filter.css'
 import {Row, Col} from 'react-bootstrap'
 export default function Filter() {
@@ -11,24 +11,52 @@ function sliderHandler(e){
     setNight(e.target.value)
   }
 }
-console.log(price)
-console.log(night)
+
+function handleBtn(e){
+  const btnContainer = document.getElementById('btnContainer')
+  let active= btnContainer.getElementsByClassName('active')
+  const clsNm = active[0].className.replace(' active', '')
+  active[0].className = clsNm
+  e.target.className += ' active'
+}
+
+console.log(price, 'price')
+console.log(night, 'night')
+
   return (
     <Row className='filterContainer'>
-      <Col xs={8} >
+      <Col xs={8} md={7}>
         <div className='txt'>
-          I am based in <span className='highlight'>Sydney, Australia</span> <br />
+          I am based in <span className='highlight underline'>Sydney, Australia</span> <br />
           and I want to see travel options for:
         </div>
-        <div>
-          <button>Domestic</button>
-          <button>International</button>
-          <button>Either is fine</button>
+        <div id='btnContainer'>
+          <button className='mybtn active' onClick={e=>handleBtn(e)}>Domestic</button>
+          <button className='mybtn' onClick={e=>handleBtn(e)}>International</button>
+          <button className='mybtn' onClick={e=>handleBtn(e)}>Either is fine</button>
         </div>
-        <div>
-          <input name='price' value={price} className='slider' min={1} max={2000}  type="range"  onChange={e=>sliderHandler(e)} />
-          <input name='night' value={night} className='slider' min={1} max={14}  type="range"  onChange={e=>sliderHandler(e)} />
-        </div>
+        <Row className='justify-content-center'>
+          <Col xs={10} md={5}>
+            <div className='d-flex align-items-center'>
+              <p >Price</p >
+              <input name='price' value={price} className='slider' min={1} max={2000}  type="range"  onChange={e=>sliderHandler(e)} />
+            </div>
+            <div className='sliderTitleContainer'>
+              <p className='ml-5'>$1</p>
+              <p>$2000+</p>
+            </div>
+          </Col>
+          <Col xs={10} md={5}>
+            <div className='d-flex align-items-center'>
+              <p >Night</p >
+              <input name='night' value={night} className='slider' min={1} max={14}  type="range"  onChange={e=>sliderHandler(e)} />
+            </div>
+            <div className='sliderTitleContainer'>
+              <p>1 night</p>
+              <p>14 nights</p>
+            </div>
+          </Col>
+        </Row>
       </Col>
     </Row>
   )

@@ -15,3 +15,8 @@
 .highlight{
   color: #00c57f
 }
+p, b{
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
