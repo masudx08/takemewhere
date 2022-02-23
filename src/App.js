@@ -6,8 +6,9 @@ import Header from './components/Header/Header';
 import Filter from './components/Filter/Filter';
 import Result from './components/Result/Result';
 import Footer from './components/Footer/Footer';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
-function App() {
+function MainApp(){
   return (
     <div>
       <Header />
@@ -15,6 +16,17 @@ function App() {
       <Result />
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+      <Route path='/' element={<MainApp />}></Route> 
+      
+    </Routes>
+    </BrowserRouter>
   );
 }
 

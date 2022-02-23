@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './result.css'
 import BeachImg from '../../images/beach.jpg'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Pagination, Row } from 'react-bootstrap'
 export default function Result() {
+  
   const results = [
     {
       img : BeachImg,
@@ -60,9 +61,9 @@ export default function Result() {
       <b >There are 29 different destinations in 12 countries you can travel for your budget, based on average prices</b>
      </div>
       {
-        results.map(item=>{
+        results.map((item, index)=>{
           return (
-            <Row className='mb-5 align-items-center'>
+            <Row key={index} className='mb-5 align-items-center'>
             <Col xs={10} md={4}>
               <img src={item.img} alt="" />
             </Col>
@@ -98,6 +99,21 @@ export default function Result() {
           )
         })
       }
+      <div id='pagination' className='d-flex justify-content-center'>
+      <Pagination>
+        <Pagination.First />
+        <Pagination.Prev />
+        <Pagination.Item active>{1}</Pagination.Item>
+        <Pagination.Item>{2}</Pagination.Item>
+        <Pagination.Item>{3}</Pagination.Item>
+        <Pagination.Item >{4}</Pagination.Item>
+        <Pagination.Item>{5}</Pagination.Item>
+        <Pagination.Ellipsis />
+        <Pagination.Item>{10}</Pagination.Item>
+        <Pagination.Next />
+        <Pagination.Last />
+    </Pagination>
+      </div>
      </div>
     </Container>
   )

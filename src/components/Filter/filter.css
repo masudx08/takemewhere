@@ -84,8 +84,8 @@
 }
 
 .sliderTitleContainer{
-  width: 78%;
+  width: calc(100% - 50px);
   display: flex;
   justify-content: space-between;
-  margin-left: 20%
+  margin-left: 60px
 }

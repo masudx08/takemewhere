@@ -4,6 +4,7 @@ import {Row, Col} from 'react-bootstrap'
 export default function Filter() {
 const [price, setPrice] = useState(2000)
 const [night, setNight] = useState(14)
+const [category, setCategory] = useState('domestic')
 function sliderHandler(e){
   if(e.target.name === 'price'){
     setPrice(e.target.value)
@@ -18,10 +19,13 @@ function handleBtn(e){
   const clsNm = active[0].className.replace(' active', '')
   active[0].className = clsNm
   e.target.className += ' active'
+  setCategory(e.target.name)
 }
 
+console.log(category, 'category')
 console.log(price, 'price')
 console.log(night, 'night')
+
 
   return (
     <Row className='filterContainer'>
@@ -31,9 +35,9 @@ console.log(night, 'night')
           and I want to see travel options for:
         </div>
         <div id='btnContainer'>
-          <button className='mybtn active' onClick={e=>handleBtn(e)}>Domestic</button>
-          <button className='mybtn' onClick={e=>handleBtn(e)}>International</button>
-          <button className='mybtn' onClick={e=>handleBtn(e)}>Either is fine</button>
+          <button className='mybtn active' name='domestic' onClick={e=>handleBtn(e)}>Domestic</button>
+          <button className='mybtn' name='international' onClick={e=>handleBtn(e)}>International</button>
+          <button className='mybtn' name='either' onClick={e=>handleBtn(e)}>Either is fine</button>
         </div>
         <Row className='justify-content-center'>
           <Col xs={10} md={5}>
