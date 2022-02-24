@@ -68,10 +68,12 @@ export default function Result() {
   }
   return (
     <Container className='resultContainer'>
+     <Row className='resultTextContainer'>
+      <Col xs={10} >
+        <b >There are 29 different destinations in 12 countries you can travel for your budget, based on average prices</b>
+      </Col>
+     </Row>
      <div>
-     <div className='resultTextContainer'>
-      <b >There are 29 different destinations in 12 countries you can travel for your budget, based on average prices</b>
-     </div>
       {
         results.map((item, index)=>{
           return (

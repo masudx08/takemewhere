@@ -14,3 +14,9 @@
 .headerContainer h2{
   font-size: 3rem;
 }
+
+@media screen and (max-width:667px) {
+  .headerContainer h2{
+    font-size: 36px;
+  }
+}

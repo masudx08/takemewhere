@@ -50,6 +50,7 @@
 .slider-title{
   margin-right: 30px;
   margin-left: 30px;
+  margin-top: -5px;
   flex-grow: 1;
 }
 .slider-slide{
@@ -74,7 +75,7 @@
   border-radius: 50%;
   position: absolute;
   background-color: #00c57f;
-  margin-top: -5px;
+  margin-top: -6px;
 }
 
 
@@ -106,19 +107,6 @@
 
 
 
-/* .custom-dropdown:focus{
-  background-color: red;
-}
-.custom-dropdown ~ .items{
-  display: none;
-}
-
-.custom-dropdown:focus ~ .items{
-  display: inline-block;
-}
-.items .item{
-  cursor: pointer;
-} */
 
 .selectedLocation{
   display: inline-block;
@@ -147,4 +135,24 @@
   font-size: 2rem;
   border-radius: 5px;
   cursor: pointer
+}
+
+
+ /* --------------------- Media query-------------------- */
+@media screen and (max-width:667px) {
+  .slider-night{
+    flex-direction: row-reverse;
+  }
+  .slider-title{
+    margin-top: 0;
+    margin-left: 0;
+    flex-grow: 0;
+    margin-right: 15px;
+  }
+  .filterContainer .txt{
+    font-size: 18px;
+  }
+  .mybtn{
+    font-size: 14px
+  }
 }

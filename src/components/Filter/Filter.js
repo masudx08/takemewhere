@@ -7,7 +7,7 @@ export default function Filter() {
   const [category, setCategory] = useState('domestic')
   const [selectedLocation, setSelectedLocation] = useState('Sydney, Australia')
   const [isChecked, setIsChecked] = useState(false)
-  const availableLocation = ['Dhaka, Bangladesh', 'Mumbai, India', 'Kabul, Afganisthan', 'London, England']
+  const availableLocation = ['Sydney, Australia', 'Dhaka, Bangladesh', 'Mumbai, India', 'Kabul, Afganisthan', 'London, England']
 
   function sliderHandler(e){
     if(e.target.name === 'price'){
@@ -43,7 +43,7 @@ console.log(category, 'category')
 
   return (
     <Row className='filterContainer'>
-      <Col xs={8} md={7}>
+      <Col xs={10} md={9}>
         <div className='txt'>
           I am based in {' '}
           <span className='highlight underline'>
@@ -70,7 +70,7 @@ console.log(category, 'category')
           <button className='mybtn' name='either' onClick={e=>handleBtn(e)}>Either is fine</button>
         </div>
         <Row className='d-flex justify-content-around'>
-          <Col xs={10} md={6}>
+          <Col xs={12} md={6}>
             <div className='sliderSection'>
               <p className='slider-title'>Price</p >
               <div className='slider-slide'>
@@ -83,9 +83,8 @@ console.log(category, 'category')
             </div>
             
           </Col>
-          <Col xs={10} md={6}>
-            <div className='sliderSection'>
-              <p className='slider-title'>Night</p >
+          <Col xs={12} md={6} >
+            <div className='sliderSection slider-night' >
               <div className='slider-slide'>
                 <input name='night' value={night} className='slider' min={1} max={14}  type="range"  onChange={e=>sliderHandler(e)} />
                 <div className='sliderTitleContainer'>
@@ -93,6 +92,7 @@ console.log(category, 'category')
                   <p>14 nights</p>
                 </div>
               </div>
+              <p className='slider-title'>Night</p >
             </div>
             
           </Col>
