@@ -78,7 +78,7 @@ export default function Result() {
         results.map((item, index)=>{
           return (
             <Row key={index} className='locationResult' onClick={()=>handleLocationDetails(item.id)}>
-            <Col xs={10} md={4}>
+            <Col xs={10} md={4} className='imagePart'>
               <img src={item.img} alt="" />
             </Col>
             <Col xs={10} md={8} >
@@ -98,7 +98,7 @@ export default function Result() {
                     <p>Return</p>
                   </div>
                 </div>
-                <div>
+                <div className='hidden'>
                   <h2>+</h2>
                 </div>
                 <div className='d-flex align-items-center'>
@@ -110,7 +110,7 @@ export default function Result() {
                     <p>{item.roomSpec}</p>
                  </div>
                 </div>
-                <div>
+                <div className='hidden'>
                   <h2>=</h2>
                 </div>
                 <div className='highlight'>
@@ -123,7 +123,7 @@ export default function Result() {
           )
         })
       }
-      <div id='pagination' className='d-flex justify-content-center'>
+      {/* <div id='pagination' className='d-flex justify-content-center'>
       <Pagination>
         <Pagination.First />
         <Pagination.Prev />
@@ -137,7 +137,7 @@ export default function Result() {
         <Pagination.Next />
         <Pagination.Last />
     </Pagination>
-      </div>
+      </div> */}
      </div>
     </Container>
   )

@@ -140,9 +140,6 @@
 
  /* --------------------- Media query-------------------- */
 @media screen and (max-width:667px) {
-  .slider-night{
-    flex-direction: row-reverse;
-  }
   .slider-title{
     margin-top: 0;
     margin-left: 0;
@@ -151,8 +148,21 @@
   }
   .filterContainer .txt{
     font-size: 18px;
+    margin-bottom: 15px;
   }
   .mybtn{
-    font-size: 14px
+    font-size: 14px;
+    padding: 2px 4px;
+    margin: 2px;
+    border: 1px solid #1f3349;
+    border-radius: 1px;
+    margin-bottom: 30px;
+  }
+  .sliderSection{
+    display: flex;
+    flex-direction: column
+  }
+  .slider-night{
+    flex-direction: column-reverse;
   }
 }

@@ -84,4 +84,19 @@
   .location{
     text-align: center;
   }
+  .hidden{
+    display:none;
+  }
+  .contentPart{
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .imagePart img{
+    width: 50%;
+  }
+  .imagePart{
+    display: flex;
+    justify-content: center;
+  }
+  
 }
