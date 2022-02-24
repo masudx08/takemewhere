@@ -2,10 +2,13 @@ import React, {useState} from 'react'
 import './result.css'
 import BeachImg from '../../images/beach.jpg'
 import { Col, Container, Pagination, Row } from 'react-bootstrap'
+import {FaPlaneDeparture} from 'react-icons/fa'
+import {FaBuilding} from 'react-icons/fa'
 export default function Result() {
   
   const results = [
     {
+      id:1,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -14,6 +17,7 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
     {
+      id:2,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -22,6 +26,7 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
     {
+      id:3,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -30,6 +35,7 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
     {
+      id:4,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -38,6 +44,7 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
     {
+      id:5,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -46,6 +53,7 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
     {
+      id:6,
       img : BeachImg,
       locationA: 'Nadi',
       locationB: 'Fiji',
@@ -69,22 +77,32 @@ export default function Result() {
             </Col>
             <Col xs={10} md={8} >
               <div>
-                <h1>
+                <h1 className='location'>
                 <span className='locationA'>{item.locationA}, </span> 
                 <span className='locationB'>{item.locationB}</span>
                 </h1>
               </div>
               <div className='contentPart'>
-                <div >
-                  <h2>${item.flyCost}</h2>
-                  <p>Return</p>
+                <div className='d-flex align-items-center'>
+                  <div>
+                    <FaPlaneDeparture className='icon'/>
+                  </div>
+                  <div>
+                    <h2>${item.flyCost}</h2>
+                    <p>Return</p>
+                  </div>
                 </div>
                 <div>
                   <h2>+</h2>
                 </div>
-                <div >
-                  <h2>${item.roomCost}</h2>
-                  <p>{item.roomSpec}</p>
+                <div className='d-flex align-items-center'>
+                  <div>
+                    <FaBuilding className='icon'/>
+                  </div>
+                 <div>
+                    <h2>${item.roomCost}</h2>
+                    <p>{item.roomSpec}</p>
+                 </div>
                 </div>
                 <div>
                   <h2>=</h2>
