@@ -8,6 +8,7 @@ export default function Filter() {
   const [selectedLocation, setSelectedLocation] = useState('Sydney, Australia')
   const [isChecked, setIsChecked] = useState(false)
   const availableLocation = ['Dhaka, Bangladesh', 'Mumbai, India', 'Kabul, Afganisthan', 'London, England']
+
   function sliderHandler(e){
     if(e.target.name === 'price'){
       setPrice(e.target.value)
@@ -29,12 +30,13 @@ export default function Filter() {
     const mycheckbox = document.getElementById('checkbox')
     mycheckbox.checked = isChecked
   },[isChecked])
+  
   function locationHandler(e){
     setSelectedLocation(e.target.innerText)
     setIsChecked(false)
   }
 
-// console.log(category, 'category')
+console.log(category, 'category')
 // console.log(price, 'price')
 // console.log(night, 'night')
 // console.log(isChecked, 'isChecked')
