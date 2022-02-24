@@ -169,4 +169,7 @@
   .slider-night{
     flex-direction: column-reverse;
   }
+  .items .item{
+    font-size: 14px;
+  }
 }
