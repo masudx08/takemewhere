@@ -17,7 +17,11 @@
   width: 100%;
   border-radius: 5px;
 }
-
+.locationResult{
+  align-items: center;
+  margin-bottom: 59px;
+  cursor: pointer;
+}
 .locationA{
   font-size: 2.3rem;
   color: #1f3349;

@@ -1,11 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import './result.css'
 import BeachImg from '../../images/beach.jpg'
 import { Col, Container, Pagination, Row } from 'react-bootstrap'
 import {FaPlaneDeparture} from 'react-icons/fa'
 import {FaBuilding} from 'react-icons/fa'
 export default function Result() {
-  
+  const navigate = useNavigate()
   const results = [
     {
       id:1,
@@ -62,6 +63,9 @@ export default function Result() {
       roomSpec: '7n x $112'
     },
   ]
+  function handleLocationDetails(id){
+    navigate('/location'+id)
+  }
   return (
     <Container className='resultContainer'>
      <div>
@@ -71,7 +75,7 @@ export default function Result() {
       {
         results.map((item, index)=>{
           return (
-            <Row key={index} className='mb-5 align-items-center'>
+            <Row key={index} className='locationResult' onClick={()=>handleLocationDetails(item.id)}>
             <Col xs={10} md={4}>
               <img src={item.img} alt="" />
             </Col>

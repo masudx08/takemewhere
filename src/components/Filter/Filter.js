@@ -19,10 +19,10 @@ export default function Filter() {
 
   function handleBtn(e){
     const btnContainer = document.getElementById('btnContainer')
-    let active= btnContainer.getElementsByClassName('active')
-    const clsNm = active[0].className.replace(' active', '')
+    let active= btnContainer.getElementsByClassName('activated')
+    const clsNm = active[0].className.replace(' activated', '')
     active[0].className = clsNm
-    e.target.className += ' active'
+    e.target.className += ' activated'
     setCategory(e.target.name)
   }
 
@@ -30,7 +30,7 @@ export default function Filter() {
     const mycheckbox = document.getElementById('checkbox')
     mycheckbox.checked = isChecked
   },[isChecked])
-  
+
   function locationHandler(e){
     setSelectedLocation(e.target.innerText)
     setIsChecked(false)
@@ -65,7 +65,7 @@ console.log(category, 'category')
           and I want to see travel options for:
         </div>
         <div id='btnContainer'>
-          <button className='mybtn active' name='domestic' onClick={e=>handleBtn(e)}>Domestic</button>
+          <button className='mybtn activated' name='domestic' onClick={e=>handleBtn(e)}>Domestic</button>
           <button className='mybtn' name='international' onClick={e=>handleBtn(e)}>International</button>
           <button className='mybtn' name='either' onClick={e=>handleBtn(e)}>Either is fine</button>
         </div>
