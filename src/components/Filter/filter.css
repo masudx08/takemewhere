@@ -146,13 +146,17 @@
     flex-grow: 0;
     margin-right: 15px;
   }
+  .filterContainer{
+    padding-bottom: 30px;
+  }
   .filterContainer .txt{
     font-size: 18px;
     margin-bottom: 15px;
   }
+  
   .mybtn{
     font-size: 14px;
-    padding: 2px 4px;
+    padding: 4px 8px;
     margin: 2px;
     border: 1px solid #1f3349;
     border-radius: 1px;

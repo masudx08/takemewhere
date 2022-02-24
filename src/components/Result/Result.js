@@ -89,7 +89,7 @@ export default function Result() {
                 </h1>
               </div>
               <div className='contentPart'>
-                <div className='d-flex align-items-center'>
+                <div className='content-min'>
                   <div>
                     <FaPlaneDeparture className='icon'/>
                   </div>
@@ -101,7 +101,7 @@ export default function Result() {
                 <div className='hidden'>
                   <h2>+</h2>
                 </div>
-                <div className='d-flex align-items-center'>
+                <div className='content-min'>
                   <div>
                     <FaBuilding className='icon'/>
                   </div>
@@ -113,7 +113,7 @@ export default function Result() {
                 <div className='hidden'>
                   <h2>=</h2>
                 </div>
-                <div className='highlight'>
+                <div className='highlight total'>
                   <h2>${item.flyCost + item.roomCost}</h2>
                   <p>Total Price</p>
                 </div>
